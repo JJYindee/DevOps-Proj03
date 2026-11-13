@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f5f7fb">
+    <meta name="theme-color" content="#0d0b0c">
     <meta name="description" content="ส่งคำขอแจ้งซ่อมอุปกรณ์และพื้นที่ส่วนกลาง พร้อมระบุสถานที่และรายละเอียดปัญหา">
     <title>FixIt | แจ้งซ่อมออนไลน์</title>
     <style>
         :root {
-            color-scheme: light;
-            --ink: #17233b;
-            --muted: #788399;
-            --paper: #f5f7fb;
-            --blue: #4268ef;
-            --blue-dark: #3154d5;
-            --line: #e8ecf3;
-            --green: #2f9b72;
+            color-scheme: dark;
+            --ink: #f4eee8;
+            --muted: #b2a7a0;
+            --paper: #0d0b0c;
+            --red: #b32635;
+            --red-dark: #8f1c29;
+            --gold: #d8b15c;
+            --line: #382c2e;
+            --surface: #171315;
+            --surface-raised: #211b1d;
         }
 
         * {
@@ -47,7 +49,7 @@
         }
 
         .topbar {
-            background: #fff;
+            background: #120f10;
             border-bottom: 1px solid var(--line);
         }
 
@@ -80,8 +82,8 @@
             height: 38px;
             place-items: center;
             border-radius: 12px;
-            background: var(--blue);
-            color: #fff;
+            background: var(--red);
+            color: #fff8f0;
             font-size: 20px;
         }
 
@@ -100,7 +102,7 @@
 
         .eyebrow {
             margin: 0 0 10px;
-            color: var(--blue);
+            color: var(--gold);
             font-size: 12px;
             font-weight: 800;
             letter-spacing: .12em;
@@ -127,16 +129,16 @@
             gap: 9px;
             margin-bottom: 5px;
             padding: 11px 14px;
-            border: 1px solid #dfe6ff;
+            border: 1px solid #554629;
             border-radius: 9px;
-            background: #fff;
-            color: #42567f;
+            background: var(--surface);
+            color: #e4d7b8;
             font-size: 12px;
             white-space: nowrap;
         }
 
         .help-note span {
-            color: var(--blue);
+            color: var(--gold);
             font-size: 17px;
         }
 
@@ -152,8 +154,8 @@
         .side-card {
             border: 1px solid var(--line);
             border-radius: 14px;
-            background: #fff;
-            box-shadow: 0 8px 26px rgb(23 35 59 / 4%);
+            background: var(--surface);
+            box-shadow: 0 12px 32px rgb(0 0 0 / 28%);
         }
 
         .form-card {
@@ -195,23 +197,23 @@
         .field-label {
             display: block;
             margin-bottom: 8px;
-            color: #34415b;
+            color: #e8dfd8;
             font-size: 13px;
             font-weight: 700;
         }
 
         .required {
-            color: #e25555;
+            color: #e16b71;
         }
 
         input,
         select,
         textarea {
             width: 100%;
-            border: 1px solid #dfe4ed;
+            border: 1px solid #49393b;
             border-radius: 8px;
             outline: none;
-            background: #fff;
+            background: var(--surface-raised);
             color: var(--ink);
             font-size: 14px;
             transition: border-color .18s ease, box-shadow .18s ease;
@@ -231,19 +233,19 @@
 
         input::placeholder,
         textarea::placeholder {
-            color: #a4adbc;
+            color: #988b85;
         }
 
         input:focus,
         select:focus,
         textarea:focus {
-            border-color: var(--blue);
-            box-shadow: 0 0 0 3px rgb(66 104 239 / 12%);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgb(216 177 92 / 16%);
         }
 
         .hint {
             margin: 7px 0 0;
-            color: #8a94a5;
+            color: #a89b94;
             font-size: 11px;
             line-height: 1.6;
         }
@@ -261,25 +263,25 @@
             gap: 9px;
             margin: 0;
             padding: 0 12px;
-            border: 1px solid #dfe4ed;
+            border: 1px solid #49393b;
             border-radius: 8px;
-            color: #46516a;
+            color: #d2c7c0;
             cursor: pointer;
             font-size: 13px;
             font-weight: 500;
         }
 
         .urgency-option:has(input:checked) {
-            border-color: var(--blue);
-            background: #f5f7ff;
-            color: var(--blue-dark);
+            border-color: var(--red);
+            background: #32191d;
+            color: #f0c4c6;
         }
 
         .urgency-option input {
             width: 15px;
             height: 15px;
             margin: 0;
-            accent-color: var(--blue);
+            accent-color: var(--red);
         }
 
         .form-footer {
@@ -295,7 +297,7 @@
         .privacy-note {
             max-width: 380px;
             margin: 0;
-            color: #8a94a5;
+            color: #a89b94;
             font-size: 11px;
             line-height: 1.6;
         }
@@ -310,8 +312,8 @@
             padding: 0 19px;
             border: 0;
             border-radius: 8px;
-            background: var(--blue);
-            color: #fff;
+            background: var(--red);
+            color: #fff8f0;
             cursor: pointer;
             font-size: 13px;
             font-weight: 750;
@@ -320,7 +322,7 @@
 
         .submit-button:hover {
             transform: translateY(-1px);
-            background: var(--blue-dark);
+            background: var(--red-dark);
         }
 
         .form-status {
@@ -328,8 +330,8 @@
             margin: 17px 0 0;
             padding: 12px 14px;
             border-radius: 8px;
-            background: #fff6e5;
-            color: #805c16;
+            background: #302719;
+            color: #ead39a;
             font-size: 13px;
             line-height: 1.65;
         }
@@ -368,8 +370,8 @@
             height: 30px;
             place-items: center;
             border-radius: 9px;
-            background: #edf1ff;
-            color: var(--blue);
+            background: #302719;
+            color: var(--gold);
             font-size: 12px;
             font-weight: 800;
         }
@@ -387,8 +389,8 @@
         }
 
         .notice-card {
-            border-color: #dceee6;
-            background: #f5fbf8;
+            border-color: #604b2b;
+            background: #211a14;
             box-shadow: none;
         }
 
@@ -400,12 +402,12 @@
         }
 
         .notice-card h2 span {
-            color: var(--green);
+            color: var(--gold);
         }
 
         .notice-card p {
             margin: 0;
-            color: #647d70;
+            color: #c4b498;
             font-size: 12px;
             line-height: 1.7;
         }
@@ -516,7 +518,7 @@
         <nav class="nav" aria-label="เมนูหลัก">
             <a class="brand" href="#" aria-label="FixIt หน้าหลัก">
                 <span class="brand-mark" aria-hidden="true">⌁</span>
-                <span>FixIt <span style="color: var(--blue)">แจ้งซ่อม</span></span>
+                <span>FixIt <span style="color: var(--gold)">แจ้งซ่อม</span></span>
             </a>
             <span class="nav-note">ศูนย์รับแจ้งปัญหาอาคารและอุปกรณ์</span>
         </nav>
